@@ -2,7 +2,7 @@ package system;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Schedule {
+public class Schedule{
 	
 	ArrayList<Integer> PurchasingDate = new ArrayList<Integer>();
 	ArrayList<Integer> _meetingDate = new ArrayList<Integer>();
@@ -14,6 +14,7 @@ public class Schedule {
 		PurchasingDate.clear();
 		_meetingDate.clear();
 		
+
 		System.out.print("Would like to set up a meeting to get a better look of the car? Y or N: ");
 		choice = set_Schedule.next();
 		
@@ -31,10 +32,11 @@ public class Schedule {
 		PurchasingDate.add(set_Schedule.nextInt());
 		System.out.print("Day (1-31): ");
 		PurchasingDate.add(set_Schedule.nextInt());
-		_meetingDate.add(2023);
+		PurchasingDate.add(2023);
 		
 	}
 	
+
 	void getScheudle() {
 		
 		 if (_meetingDate.size() > 0) {

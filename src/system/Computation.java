@@ -1,9 +1,8 @@
 package system;
 import java.util.Scanner;
 
-public class Computation{
-	private int _carPrice, _tax;
-	int _userMoney, _total, choice = -1;
+public class Computation {
+	public static  int _carPrice, _tax, _userMoney,  choice = -1;
 	
 	void compute() {
 		Car carInformation = new Car();
@@ -12,9 +11,10 @@ public class Computation{
 		int change;
 		
 		do {
-			System.out.print("What car would you like to buy? (1 - " + carInformation._price.size() + ") ");
+			
+			System.out.print("What car would you like to buy? (1 - " + Car._price.size() + ") ");
 			choice = getChoice.nextInt();
-		} while (choice <= 0 | choice >= carInformation._price.size());
+		} while (choice <= 0 | choice > carInformation._price.size());
 		
 		_carPrice = carInformation._price.get(choice - 1);
 		
@@ -34,6 +34,7 @@ public class Computation{
 		carInformation.get_CarInfo(choice-1);
 		
 		System.out.print("\nCar Payment\n");
+		System.out.println("Total car price: " + _carPrice);
 		do {
 			System.out.print("Your payment: ");
 			_userMoney = getChoice.nextInt();

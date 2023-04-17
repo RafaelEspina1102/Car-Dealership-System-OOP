@@ -41,11 +41,11 @@ public class Start {
 				username = getAnswer.next();
 				
 				System.out.print("Password: ");
-				password = getAnswer.nextLine();
+				password = getAnswer.next();
 				user.userLogin(username, password);
 			}
 			
-			System.out.println("\n\nWelcome to Rafael's Car Dealership");
+			System.out.println("\n\nWelcome to Rafael's Car Dealership\n");
 			
 			System.out.println("What status of the car would you want to buy?");
 			System.out.println("1. New car\n2. Used car");
@@ -58,11 +58,13 @@ public class Start {
 				carStatusChoice = "Used";
 			}
 			
-			System.out.println("Car brands|");
+			System.out.println("\nCar brands");
 			System.out.println("1. Toyota\n2.Honda\n3.Mitsubishi\n4. Ford");
 			System.out.println("\nSpecific car type");
 			System.out.println("5. Sedan\n6. SUV\n7. Truck\n9. Hatchback");
+			System.out.println("Answer: ");
 			whatCar = getAnswer.nextInt();
+			System.out.println();
 			
 			switch(whatCar) {
 			case 1: cars.set_ToyotaInfo(carStatusChoice); cars.get_CarInfo(); break;
@@ -82,10 +84,11 @@ public class Start {
 			
 			cars.compute();
 			
-			System.out.print("\nThank you for your purchase!");
+			System.out.println("\nThank you for your purchase!");
+			System.out.println("\nReceipt");
 			user.showInformation();
 			
-			System.out.print("Would you like to buy again? Y or N: ");
+			System.out.print("\nWould you like to buy again? Y or N: ");
 			repeat = getAnswer.next();
 			
 			if (repeat.equalsIgnoreCase("n")) {

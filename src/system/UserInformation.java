@@ -6,31 +6,27 @@ import java.util.List;
 public class UserInformation extends Transaction {
 	
 	// User Information
-	private List<String> _dbUsername = new ArrayList<String>();
-	private List<String> _dbPassword = new ArrayList<String>();
-	List<String> _FName = new ArrayList<String>();
-	List<String> _LName = new ArrayList<String>();
-	List<String> _address = new ArrayList<String>();
-	List<String> _postalCode = new ArrayList<String>();
-	List<String> _phoneNumber = new ArrayList<String>();
+	public static  List<String> _dbUsername = new ArrayList<String>();
+	public static  List<String> _dbPassword = new ArrayList<String>();
+	public static List<String> _FName = new ArrayList<String>();
+	public static List<String> _LName = new ArrayList<String>();
+	public static List<String> _address = new ArrayList<String>();
+	public static List<String> _postalCode = new ArrayList<String>();
+	public static List<String> _phoneNumber = new ArrayList<String>();
 	
 	// Other
-	int accountCreateIndex = _dbUsername.size() , index = 0;
+	public static int accountCreateIndex = _dbUsername.size() , index = 0;
 	String choice = "y";
-	
-	// Start of code
-	public static void main(String[] args) {
-		Scanner getAnswer = new Scanner(System.in);
-		UserInformation information = new UserInformation();
-		
-		
-	}
 	
 	// User Login
 	 boolean userLogin(String Username, String Password) {
 		
 		for (int i = 0; i < accountCreateIndex; i++) {
 			if (Username.equalsIgnoreCase(_dbUsername.get(i)) && (Password.equals(_dbPassword.get(i)))) {
+				index = i;
+				return true;
+			}
+			else {
 				index = i;
 				return true;
 			}
@@ -79,7 +75,7 @@ public class UserInformation extends Transaction {
 	}
 	
 	
-	 void showUserInfo() {
+	 public static void showUserInfo() {
 		
 		System.out.println("First Name: " + _FName.get(index));
 		System.out.println("Address: " + _address.get(index));

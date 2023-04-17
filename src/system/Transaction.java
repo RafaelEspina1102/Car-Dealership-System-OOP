@@ -10,7 +10,7 @@ public class Transaction{
 		user.showUserInfo();
 		carInformation.get_CarInfo(null, carInformation.choice-1);
 		System.out.println("Your Payment: " + carInformation._userMoney);
-		System.out.println("Car price total: " + carInformation._total);
+		System.out.println("Car price total: " + carInformation._carPrice);
 		
 	}
 }

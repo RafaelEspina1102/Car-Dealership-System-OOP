@@ -7,12 +7,11 @@ import java.util.List;
 
 public class Car extends Computation {
 	
-	private ArrayList<String> _brand = new ArrayList<String>();
-	private ArrayList<String> _model = new ArrayList<String>();
-	private ArrayList<String> _colour = new ArrayList<String>(Arrays.asList("White", "Blue", "Red", "Black", "Grey", "Gold"));
-	ArrayList<Integer> _price = new ArrayList<Integer>();
-	private ArrayList<String> _carType = new ArrayList<String>();
-	private String _status = null;
+	public static ArrayList<String> _brand = new ArrayList<String>();
+	public static ArrayList<String> _model = new ArrayList<String>();
+	public static ArrayList<Integer> _price = new ArrayList<Integer>();
+	public static ArrayList<String> _carType = new ArrayList<String>();
+	public static String _status = null;
 	
 	
 	void clearInformation() {
@@ -96,7 +95,6 @@ public class Car extends Computation {
 		if (status.equalsIgnoreCase("Used"))
 		{
 			_status = "Used";
-			_price.add(711000); _price.add(1068000); _price.add(1568000); _price.add(1048000);
 			temporaryPrice.add(711000); temporaryPrice.add(1068000); temporaryPrice.add(1568000); temporaryPrice.add(1048000);
 			
 			for (int i = 0; i < sizeChecker.size(); i ++)
@@ -145,7 +143,6 @@ public class Car extends Computation {
 		if (status.equalsIgnoreCase("Used"))
 		{
 			_status = "Used";
-			_price.add(1213000); _price.add(1799000); _price.add(3298000); _price.add(1335000);
 			temporaryPrice.add(1213000); temporaryPrice.add(1799000); temporaryPrice.add(3298000); temporaryPrice.add(1335000);
 			
 			for (int i = 0; i < sizeChecker.size(); i ++)
@@ -194,7 +191,6 @@ public class Car extends Computation {
 		if (status.equalsIgnoreCase("Used"))
 		{
 			_status = "Used";
-			_price.add(1090000); _price.add(1589000); _price.add(2350000); _price.add(1153000);
 			temporaryPrice.add(1090000); temporaryPrice.add(1589000); temporaryPrice.add(2350000); temporaryPrice.add(1153000);
 			
 			for (int i = 0; i < temporaryPrice.size(); i ++)
